@@ -26,7 +26,13 @@ export const StatePreview = ({ name, workspaces }: StatePreviewProps) => {
         </span>
         <span className="flex space-x-2">
           {workspaces.map((x) => (
-            <Button key={x}>{x}</Button>
+            <Link
+              key={x}
+              href={`/dashboard/view-state/?name=${name}&workspace=${x}`}
+              passHref
+            >
+              <Button>{x}</Button>
+            </Link>
           ))}
         </span>
       </a>
