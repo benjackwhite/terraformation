@@ -1,0 +1,5 @@
+node_modules/
+tf/
+.env
+.env.local
+.next/
