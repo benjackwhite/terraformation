@@ -8,6 +8,11 @@ const nextConfig = {
         destination: "/dashboard",
         permanent: false,
       },
+      {
+        source: "/healthz",
+        destination: "/api/healthz",
+        permanent: false,
+      },
     ];
   },
   experimental: {

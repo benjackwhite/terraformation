@@ -147,7 +147,7 @@ const getProviderInfo = (
 };
 
 const getExternalLink = (resource: TerraformStateContentResource) => {
-  const arn = resource.instances[0].attributes.arn;
+  const arn = resource.instances[0]?.attributes?.arn;
   if (arn) {
     try {
       return new ARN(arn).consoleLink;
