@@ -1,6 +1,0 @@
-
-services:
-  web:
-    image: ghcr.io/benjackwhite/terraformation:latest
-    ports:
-      - 3000:3000      

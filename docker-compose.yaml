@@ -1,6 +1,9 @@
 
 services:
   web:
-    build: .
+    image: ghcr.io/benjackwhite/terraformation:latest
     ports:
-      - 3000:3000
+      - 3000:3000      
+    env_file:
+      - .env.local # Be sure to copy from .env.template with appropriate values added
+      # - .env.template
