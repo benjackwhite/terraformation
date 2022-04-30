@@ -69,6 +69,26 @@ const AppResourcesPage: NextPage = () => {
               <label htmlFor="show_meta">Show meta resources</label>
             </li>
           </ul>
+
+          <SwrWrapper
+            swr={terrafromStateSwr}
+            renderLoading={() => (
+              <p className="w-full placeholder bg-slate-200 p-2 rounded-md mt-6">
+                Loading...
+              </p>
+            )}
+            renderError={() => (
+              <p className="w-full bg-slate-200 p-2 rounded-md mt-6">
+                Something went wrong
+              </p>
+            )}
+            render={() => (
+              <p className="bg-slate-200 p-2 rounded-md mt-6">
+                Showing <b>{resources?.length}</b> of{" "}
+                <b>{currentState?.state?.resources?.length}</b> state items.
+              </p>
+            )}
+          />
         </>
       )}
     >
