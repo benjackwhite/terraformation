@@ -12,6 +12,10 @@ Terraformation was built by a lover of the Terraform but who wanted after a smal
 
 ### Docker
 
+```
+ghcr.io/benjackwhite/terraformation:latest
+```
+
 Tagged commits on the `main` branch are pushed as Docker images to [the github registry](https://github.com/benjackwhite/terraformation/pkgs/container/terraformation)
 
 This Docker image can be deployed to **Kubernetes** or otherwise as a simple stateless deployment.
@@ -20,11 +24,7 @@ To run locally see the `docker-compose.yaml` file as a starting point.
 
 ### Vercel Deploy
 
-This option is probably fine for demo's or deployments with little-to-no sensitive state.
-
-> WARNING
-
-This is probably the easiest way to get started but gives you the fewest options for securing your web deployment. See their page on [protecting-deployments](https://vercel.com/blog/protecting-deployments) for more information
+**WARNING**: This option is probably fine for demo's or deployments with little-to-no sensitive state. It is probably the easiest way to get started but gives you the fewest options for securing your web deployment. See their page on [protecting-deployments](https://vercel.com/blog/protecting-deployments) for more information
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbenjackwhite%2Fterraformation&env=TF_BUCKET_AWS_REGION,TF_BUCKET_NAME,TF_BUCKET_AWS_SECRET_ACCESS_KEY,TF_BUCKET_AWS_ACCESS_KEY_ID&envDescription=AWS%20Credentials%20to%20access%20your%20S3%20bucket%20containing%20Terraform%20state)
 
