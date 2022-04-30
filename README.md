@@ -10,6 +10,10 @@ Terraformation was built by a lover of the Terraform but who wanted after a smal
 
 ## Deploy
 
+In order for Terraformation to work it needs **read** access to your S3 Terraform state bucket. Being a Terraform visualisation tool, we would of course recommend using Terraform for this - as we did for the demo version of this repository [here](https://github.com/benjackwhite/terraformation/blob/main/tf/terraformation/terraformation-user.tf)
+
+You can set specific access keys with `TF_BUCKET_AWS_ACCESS_KEY_ID` and `TF_BUCKET_AWS_SECRET_ACCESS_KEY`, otherwise Terraformation will simply use the default AWS configuration provided to the container.
+
 ### Docker
 
 ```
